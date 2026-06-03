@@ -1,0 +1,50 @@
+{
+  "hero": "/images/landing.jpg",
+  "heroSource": "WhatsApp Image 2026-06-03 at 11.30.07 PM.jpeg",
+  "heroFrom": "moments",
+  "heroWidth": 1280,
+  "heroHeight": 960,
+  "heroPixels": 1228800,
+  "images": [
+    "/images/memories/image1.jpg",
+    "/images/memories/image2.jpg",
+    "/images/memories/image3.jpg",
+    "/images/memories/image4.jpg",
+    "/images/memories/image5.jpg",
+    "/images/memories/image6.jpg",
+    "/images/memories/image7.jpg",
+    "/images/memories/image8.jpg",
+    "/images/memories/image9.jpg",
+    "/images/memories/image10.jpg",
+    "/images/memories/image11.jpg",
+    "/images/memories/image12.jpg",
+    "/images/memories/image13.jpg",
+    "/images/memories/image14.jpg",
+    "/images/memories/image15.jpg",
+    "/images/memories/image16.jpg",
+    "/images/memories/image17.jpg",
+    "/images/memories/image18.jpg",
+    "/images/memories/image19.jpg",
+    "/images/memories/image20.jpg",
+    "/images/memories/image21.jpg",
+    "/images/memories/image22.jpg",
+    "/images/memories/image23.jpg",
+    "/images/memories/image24.jpg",
+    "/images/memories/image25.jpg",
+    "/images/memories/image26.jpg",
+    "/images/memories/image27.jpg",
+    "/images/memories/image28.jpg",
+    "/images/memories/image29.jpg",
+    "/images/memories/image30.jpg"
+  ],
+  "syncedAt": "2026-06-03T18:13:45.110Z",
+  "sourceDirs": [
+    "C:\\Users\\jayab\\OneDrive\\Desktop\\photos_memories",
+    "C:\\Users\\jayab\\OneDrive\\Desktop\\moments"
+  ],
+  "countByFolder": {
+    "moments": 12,
+    "photos_memories": 18
+  },
+  "totalImages": 31
+}

@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Happy Birthday Jerry — Birthday Surprise Website
+
+A heartfelt, cinematic birthday surprise built with Next.js, TypeScript, Tailwind CSS, Framer Motion, and React Confetti.
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**Password:** `JERRY` (case-insensitive)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Photos (OneDrive sync)
 
-## Learn More
+Images are merged from both folders:
 
-To learn more about Next.js, take a look at the following resources:
+- `C:\Users\jayab\OneDrive\Desktop\photos_memories`
+- `C:\Users\jayab\OneDrive\Desktop\moments`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Override with `PHOTOS_SOURCES` (semicolon-separated paths on Windows).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run sync-memories
+```
 
-## Deploy on Vercel
+- Largest image → `public/images/landing.jpg` (landing hero)
+- Remaining images → `public/images/memories/image1.jpg`, `image2.jpg`, …
+- Regenerates `src/data/memories-images.json` for the gallery
+- `prebuild` runs sync automatically before `npm run build`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Supported: `.jpg`, `.jpeg`, `.png`, `.webp` (videos in the folder are skipped).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Background music:** `public/music/birthday.mp3` — [Party Like It's Your Birthday](https://mixkit.co/free-stock-music/tag/birthday/) by Mixkit (free for personal/commercial use, no attribution required). Replace the file anytime to use your own track.
+
+## Deploy to Vercel
+
+1. Push this repo to GitHub
+2. Import the project at [vercel.com/new](https://vercel.com/new)
+3. Deploy — no extra configuration required
+
+```bash
+npm run build
+npm start
+```
+
+## Project Structure
+
+```
+src/
+  app/              # Routes: / and /memories
+  components/
+    landing/        # Hero, password gate, balloons, music
+    memories/       # Story sections, gallery, timeline, final surprise
+    ui/             # GlassCard, SectionReveal, particles
+  lib/constants.ts  # Copy text, password, image paths
+public/
+  images/
+  music/
+```
+
+## Tech Stack
+
+- Next.js App Router
+- TypeScript
+- Tailwind CSS v4
+- Framer Motion
+- Lucide React
+- react-confetti
